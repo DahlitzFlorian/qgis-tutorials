@@ -1,0 +1,93 @@
+baseURL = 'https://example.org/'
+locale = 'de-DE'
+title = 'Q-GIS Tutorials'
+theme = ["PaperMod"]
+defaultContentLanguage = 'de'
+
+[outputs]
+home = [ "HTML", "RSS", "JSON" ]
+
+[params.fuseOpts]
+isCaseSensitive = false
+shouldSort = true
+location = 0
+distance = 1_000
+threshold = 0.4
+minMatchCharLength = 0
+keys = [ "title", "permalink", "summary", "content" ]
+
+pygmentsUseClasses = true
+
+[params]
+env = "production"
+title = "Q-GIS Tutorials"
+description = "Deutschsprachiche Q-GIS Tutorials für den Natur- und Umweltschutz"
+keywords = [ "Q-GIS", "QGIS", "Tutorials" ]
+author = "Florian Dahlitz"
+images = [ "<link or path of image for opengraph, twitter-cards>" ]
+DateFormat = "2 January 2006"
+defaultTheme = "auto"
+disableThemeToggle = false
+ShowReadingTime = true
+ShowPostNavLinks = true
+ShowBreadCrumbs = true
+ShowCodeCopyButtons = true
+ShowWordCount = true
+ShowRssButtonInSectionTermList = true
+UseHugoToc = true
+disableSpecial1stPost = false
+disableScrollToTop = false
+comments = false
+hidemeta = false
+hideSummary = false
+showtoc = true
+tocopen = false
+
+[params.assets]
+favicon = "<link / abs url>"
+favicon16x16 = "<link / abs url>"
+favicon32x32 = "<link / abs url>"
+apple_touch_icon = "<link / abs url>"
+safari_pinned_tab = "<link / abs url>"
+
+[params.label]
+text = "Home"
+icon = "/apple-touch-icon.png"
+iconHeight = 35
+
+[params.homeInfoParams]
+Title = "Willkommen bei Q-GIS Tutorials 👋"
+Content = "Hier findest du einige nützliche Beiträge zur Arbeit mit Q-GIS. Einige Inhalte richten sich spezifisch an ehrenamtlichtätige Menschen im Umwelt- und Naturschutz."
+
+[params.cover]
+hidden = true
+hiddenInList = true
+hiddenInSingle = true
+
+[params.editPost]
+URL = "https://github.com/DahlitzFlorian/qgis-tutorials/tree/main/content"
+Text = "Änderungen vorschlagen"
+appendFilePath = true
+
+[[menu.main]]
+identifier = "tags"
+name = "Tags"
+url = "/tags/"
+weight = 10
+
+[[menu.main]]
+identifier = "suche"
+name = "Suche"
+url = "/suche/"
+weight = 20
+
+[markup.highlight]
+noClasses = false
+
+[markup.tableOfContents]
+startLevel = 2
+endLevel = 4
+ordered = true
+
+[taxonomies]
+tag = "tags"
